@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+
+  mariadb:
+    image: mariadb:10.6.10
+    container_name: casbin_mariadb
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./.data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+  adminer:
+   image: adminer
+   container_name: casbin_adminer
+   restart: always
+   depends_on:
+     - mariadb
+   links:
+     - mariadb
+   ports:
+     - "8181:8080"
