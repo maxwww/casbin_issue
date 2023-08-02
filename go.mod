@@ -3,7 +3,6 @@ module github.com/maxwww/casbin_issue
 go 1.19
 
 require (
-	github.com/Blank-Xu/sql-adapter v1.0.0
 	github.com/casbin/casbin/v2 v2.71.1
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/gofiber/fiber/v2 v2.48.0

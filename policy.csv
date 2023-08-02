@@ -1,0 +1,13 @@
+p,root:root:root,*,*
+p,core:users:list,/users,GET
+p,core:users:create,/users,POST
+
+g,Root,root:root:root
+g,List Users Roles,core:users:list
+g,Admin Users Roles,core:users:list
+g,Admin Users Roles,core:users:create
+
+g,1,Root
+g,2,List Users Roles
+g,3,Admin Users Roles
+g,4,Admin Users Roles
